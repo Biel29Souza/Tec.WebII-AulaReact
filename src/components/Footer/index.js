@@ -1,9 +1,10 @@
+import styles from './Footer.module.css'
+
 export function Footer(){
     return(
-        <footer>
-            <span>Telefone</span>
-            <span>E-mail</span>
-            <span>Instagram</span>
+        <footer className={styles.footer}>
+            <h1>Footer</h1>
         </footer>
+        
     )
 };
