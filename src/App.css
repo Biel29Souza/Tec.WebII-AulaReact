@@ -37,10 +37,29 @@
   }
 }
 
-.a_styles{
+.a_styles {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+
+
+:root {
+  --color-bg-light: #f0f8ff;   /* azul bebê */
+  --color-bg-dark: #1a1a1a;    /* preto */
+  --color-primary: #6a0dad;    /* roxo */
+  --color-text-light: #000;
+  --color-text-dark: #fff;
+}
+
+body.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+body.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}

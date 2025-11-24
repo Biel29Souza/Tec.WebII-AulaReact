@@ -1,0 +1,34 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--color-primary); /* roxo */
+  color: var(--color-text-dark);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: var(--color-bg-light); /* azul bebê */
+}
+
+.themeToggle {
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
