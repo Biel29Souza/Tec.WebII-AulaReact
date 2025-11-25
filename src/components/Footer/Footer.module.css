@@ -1,0 +1,40 @@
+.footer {
+    margin-top: 40px;
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 2px solid var(--color-primary);
+  }
+  
+
+  body.light .footer {
+    background-color: var(--color-bg-light);
+    color: var(--color-accent-light);
+  }
+  
+  
+  body.dark .footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-accent-dark);
+  }
+  
+  .text {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  
+  /* Tema claro  links brancos */
+  body.light .links a {
+    color: var(--color-accent-light);
+  }
+  
+  /* Tema escuro  links azul bebê */
+  body.dark .links a {
+    color: var(--color-accent-dark);
+  }
+  

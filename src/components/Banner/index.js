@@ -1,47 +1,42 @@
 // src/components/Banner/index.js
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./Banner.module.css";
-
-const images = [
-  {
-    url: "https://picsum.photos/1200/500?random=1",
-    title: "Filme Destaque",
-    description: "Descrição do filme destaque"
-  },
-  {
-    url: "https://picsum.photos/1200/500?random=2",
-    title: "Série Popular",
-    description: "Descrição da série popular"
-  },
-  {
-    url: "https://picsum.photos/1200/500?random=3",
-    title: "Novo Lançamento",
-    description: "Descrição do lançamento"
-  }
-];
+import { bannerSlides } from "../../components/Mocks/bannerSlides.js";
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
+
+  const next = () => setCurrentIndex((prev) => (prev + 1) % bannerSlides.length);
+  const goTo = (index) => setCurrentIndex(index);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
+    intervalRef.current = setInterval(next, 5000);
+    return () => clearInterval(intervalRef.current);
   }, []);
 
-  const currentImage = images[currentIndex];
+  const current = bannerSlides[currentIndex];
 
   return (
-    <div
+    <section
       className={styles.banner}
-      style={{ backgroundImage: `url(${currentImage.url})` }}
+      style={{ backgroundImage: `url(${current.url})` }}
     >
       <div className={styles.content}>
-        <h1>{currentImage.title}</h1>
-        <p>{currentImage.description}</p>
+        <h1>{current.title}</h1>
+        <p>{current.description}</p>
       </div>
-    </div>
+
+      <div className={styles.dots}>
+        {bannerSlides.map((_, i) => (
+          <button
+            key={i}
+            className={`${styles.dot} ${i === currentIndex ? styles.active : ""}`}
+            onClick={() => goTo(i)}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 

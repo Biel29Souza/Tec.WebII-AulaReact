@@ -1,9 +1,10 @@
-/* src/components/Row/Row.module.css */
 .rowContainer {
+  position: relative;
   border: 2px solid var(--color-primary);
   border-radius: 12px;
   padding: 20px;
   margin: 30px 0;
+  overflow: hidden;
 }
 
 .rowTitle {
@@ -13,23 +14,58 @@
   font-weight: bold;
 }
 
-/* Carrossel infinito */
+/* Carousel container (scrollable) */
 .carousel {
-  overflow: hidden;
-  position: relative;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Hide scrollbar (optional) */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track holds duplicated items for seamless loop */
 .track {
   display: flex;
   width: max-content;
-  animation: scroll 30s linear infinite;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* Arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.06);
+  opacity: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+/* Theme-based arrow colors */
+body.light .arrow {
+  background: var(--color-primary);      /* purple in light theme */
+  color: var(--color-text-dark);
+}
+
+body.dark .arrow {
+  background: var(--color-bg-light);     /* baby blue in dark theme */
+  color: var(--color-text-light);
 }

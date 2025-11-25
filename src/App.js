@@ -13,7 +13,7 @@
 
 // export default App;
 
-// src/App.js
+
 import React, { useState, useEffect } from "react";
 import AppRoutes from "./routes";
 import "./App.css";
@@ -29,6 +29,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
