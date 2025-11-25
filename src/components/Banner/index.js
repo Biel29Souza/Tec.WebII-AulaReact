@@ -1,4 +1,3 @@
-// src/components/Banner/index.js
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./Banner.module.css";
 import { bannerSlides } from "../../components/Mocks/bannerSlides.js";
@@ -15,7 +14,11 @@ function Banner() {
     return () => clearInterval(intervalRef.current);
   }, []);
 
-  const current = bannerSlides[currentIndex];
+  const current = bannerSlides?.[currentIndex];
+
+  if (!current) {
+    return <div>Carregando banner...</div>;
+  }
 
   return (
     <section

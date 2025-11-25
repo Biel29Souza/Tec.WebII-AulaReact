@@ -1,33 +1,22 @@
+// src/mocks/bannerSlides.js
 export const bannerSlides = [
     {
-      id: "stranger-things",
-      url: "https://upload.wikimedia.org/wikipedia/en/7/7a/Stranger_Things_season_4.jpg",
-      title: "Stranger Things",
-      description: "Mistério, amizade e o Mundo Invertido."
+      id: "WBxEi6cbU0k",
+      url: "https://img.youtube.com/vi/WBxEi6cbU0k/maxresdefault.jpg",
+      title: "TENTE NÃO RIR 2025 — Melhores Memes",
+      description: "Compilado engraçado"
     },
     {
-      id: "witcher",
-      url: "https://upload.wikimedia.org/wikipedia/en/0/0c/The_Witcher_season_2.jpg",
-      title: "The Witcher",
-      description: "Monstros, magia e destino."
+      id: "objoZK45ptM",
+      url: "https://img.youtube.com/vi/objoZK45ptM/maxresdefault.jpg",
+      title: "Vídeos Engraçados 2025 — Parte 2",
+      description: "Humor e tombos"
     },
     {
-      id: "bridgerton",
-      url: "https://upload.wikimedia.org/wikipedia/en/0/0a/Bridgerton_season_2.jpg",
-      title: "Bridgerton",
-      description: "Romance e intrigas na alta sociedade londrina."
-    },
-    {
-      id: "narcos",
-      url: "https://upload.wikimedia.org/wikipedia/en/0/0a/Narcos_season_3.jpg",
-      title: "Narcos",
-      description: "A ascensão e queda dos cartéis."
-    },
-    {
-      id: "sociedade-da-neve",
-      url: "https://upload.wikimedia.org/wikipedia/en/9/9a/Society_of_the_Snow.jpg",
-      title: "A Sociedade da Neve",
-      description: "Baseado em fatos reais — sobrevivência nos Andes."
+      id: "6axkTzGhiYY",
+      url: "https://img.youtube.com/vi/6axkTzGhiYY/maxresdefault.jpg",
+      title: "Tente Não Rir — Memes e Pegadinhas",
+      description: "Desafio"
     }
   ];
   

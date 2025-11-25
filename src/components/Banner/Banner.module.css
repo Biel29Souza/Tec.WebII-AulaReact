@@ -1,3 +1,31 @@
+.banner {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  margin-top: 60px; /* espaço para navbar fixa */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.content h1,
+.content p {
+  margin: 0 0 8px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
 .dots {
   position: absolute;
   left: 50%;
@@ -5,6 +33,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 2;
 }
 
 .dot {
