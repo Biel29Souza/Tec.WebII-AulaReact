@@ -11,6 +11,7 @@ function Navbar({ theme, setTheme }) {
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
 
+  
   const allVideos = [
     ...comedyVideos,
     ...dramaVideos,
@@ -21,6 +22,7 @@ function Navbar({ theme, setTheme }) {
     ...acaoVideos
   ];
 
+  // Atualiza query conforme o usuário digita.
   const handleChange = (e) => {
     const value = e.target.value;
     setQuery(value);
@@ -37,6 +39,7 @@ function Navbar({ theme, setTheme }) {
     setResults(filtered);
   };
 
+  // Quando o usuário clica em um resultado da busca
   const handleSelect = (videoId) => {
     setQuery("");
     setResults([]);
@@ -49,7 +52,7 @@ function Navbar({ theme, setTheme }) {
 
       <nav className={styles.links}>
         <Link to="/">Home</Link>
-        <Link to="/">Catalogo</Link>
+        <Link to="/catalogo">Catalogo</Link>
         <Link to="/watch">Watch</Link>
       </nav>
 

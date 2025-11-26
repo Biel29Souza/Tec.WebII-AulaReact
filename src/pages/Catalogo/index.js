@@ -2,23 +2,23 @@ import React from "react";
 import Banner from "../../components/Banner";
 import Row from "../../components/Containers/Row";
 import {comedyVideos,dramaVideos,terrorVideos,artigosVideos,seriesVideos,futebolVideos,acaoVideos} from "../../components/Mocks/videos.js";
-import "./Home.module.css";
+import "./Catalogo.module.css";
 //import Footer from "../../components/Footer";
 
-function Home() {
+function Catalogo() {
   return (
-    <div className="home">
-      <Banner />
+    <div className="catalogo">
+      
       <Row title="Comédia" videos={comedyVideos} />
-      {/* <Row title="Drama" videos={dramaVideos} />
+      <Row title="Drama" videos={dramaVideos} />
       <Row title="Terror" videos={terrorVideos} />
-      <Row title="Artigos" videos={artigosVideos} /> */}
+      <Row title="Artigos" videos={artigosVideos} />
       <Row title="Séries" videos={seriesVideos} />
       <Row title="Futebol" videos={futebolVideos} />
-      {/* <Row title="Ação" videos={acaoVideos} /> */}
+      <Row title="Ação" videos={acaoVideos} />
       
     </div>
   );
 }
 
-export default Home;
+export default Catalogo;

@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Watch from "./pages/Watch";
 import Navbar from "./components/Navbar";
+import Catalogo from "./pages/Catalogo";
+import Footer from "./components/Footer";
 
 function AppRoutes({ theme, setTheme }) {
   return (
@@ -12,7 +14,9 @@ function AppRoutes({ theme, setTheme }) {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/watch" element={<Watch />} />
+        <Route path="/catalogo" element={<Catalogo />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

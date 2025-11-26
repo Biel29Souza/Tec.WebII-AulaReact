@@ -1,4 +1,3 @@
-// src/components/Row/index.js
 import React, { useRef, useEffect } from "react";
 import styles from "./Row.module.css";
 import Card from "../Card";
@@ -7,9 +6,10 @@ function Row({ title, videos }) {
   const carouselRef = useRef(null);
   const rafRef = useRef(null);
 
-  // Duplicate videos to create seamless loop
+  
   const loopVideos = [...videos, ...videos];
 
+  // Scroll manual com as setas
   const scrollByAmount = (amount) => {
     const el = carouselRef.current;
     if (!el) return;
@@ -26,13 +26,13 @@ function Row({ title, videos }) {
     scrollByAmount(direction === "left" ? -amount : amount);
   };
 
-  // Slow auto-scroll only while hovering
+  // Auto‑scroll ao passar o mouse
   const startAutoScroll = () => {
     const el = carouselRef.current;
     if (!el) return;
 
     const step = () => {
-      // move slowly
+      // tempo de movimento
       el.scrollLeft += 0.5;
 
       // when we reach half of duplicated content, wrap to start
@@ -47,6 +47,7 @@ function Row({ title, videos }) {
     rafRef.current = requestAnimationFrame(step);
   };
 
+  // Parar a rolagem, quando o mouse nao esta em cima
   const stopAutoScroll = () => {
     if (rafRef.current) {
       cancelAnimationFrame(rafRef.current);
@@ -54,7 +55,7 @@ function Row({ title, videos }) {
     }
   };
 
-  // Clean up on unmount
+  // Limpeza no useEffect
   useEffect(() => {
     return () => stopAutoScroll();
   }, []);
