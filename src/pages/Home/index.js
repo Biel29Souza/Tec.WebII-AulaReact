@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner";
-import Row from "../../components/Containers/Row";
+import Row from "../../components/Row/index.js";
 import {comedyVideos,dramaVideos,terrorVideos,artigosVideos,seriesVideos,futebolVideos,acaoVideos} from "../../components/Mocks/videos.js";
 import "./Home.module.css";
 //import Footer from "../../components/Footer";
